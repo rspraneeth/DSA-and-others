@@ -10,22 +10,22 @@ ch = ['b', 'a', 'a', 'g', 'd', 'c', 'a', 'g', 'g']
 # print(c)
 
 # optimized approach, iterating from right to left, carry forwarding count of 'g' and adding to 'a'
-# ans,c = 0, 0
-# for i in range(len(ch)-1, -1, -1):
-#     if ch[i] == 'g':
-#         c += 1
-#     elif ch[i] == 'a':
-#         ans += c
-# print(ans)
-
-# iterating from left to right, carry forwarding count of 'a' and adding to 'g'
 ans, c = 0, 0
-for i in range(len(ch)):
-    if ch[i] == 'a':
+for i in range(len(ch)-1, -1, -1):
+    if ch[i] == 'g':
         c += 1
-    elif ch[i] == 'g':
+    elif ch[i] == 'a':
         ans += c
 print(ans)
+
+# iterating from left to right, carry forwarding count of 'a' and adding to 'g'
+# ans, c = 0, 0
+# for i in range(len(ch)):
+#     if ch[i] == 'a':
+#         c += 1
+#     elif ch[i] == 'g':
+#         ans += c
+# print(ans)
 
 
 # your blind approach, but tried to reduce iterations, but why did I do this!!! such a big code, try the smarter way
