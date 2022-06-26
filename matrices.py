@@ -86,3 +86,24 @@ def AllDiagonalsRtoL(A):
             x += 1
             y -= 1
         print()
+
+# transpose of a matrix for size n
+def transpose(A):
+    n = len(A)
+    for i in range(1, n):
+        for j in range(i):
+            temp = A[i][j]
+            A[i][j] = A[j][i]
+            A[j][i] = temp
+    PrintMatrix(A)
+    # return A
+
+# rotate the matrix by 90 deg clockwise direction holding TR(top right), size n
+def rotate90(A):
+    transpose(A)
+    n = len(A)
+    for i in range(n):
+        A[i].reverse()
+    PrintMatrix(A)
+
+rotate90(mat)
