@@ -1,4 +1,4 @@
-A1 = [5, 6, 3, 8, -1, 7, 8, 9, 5, 3]
+A1 = [5, 6, 3, -1, 7, 8, 9, 7, 9, 0, -1]
 def solve1(A):
     n = len(A)
     mx = 0
@@ -27,7 +27,7 @@ def solve1(A):
 #     while i < n and j < n:
 #         if A[j] >= 0:
 #             j += 1
-#         else:
+#         if A[j] < 0 or j == n-1:
 #             if j-i > end-start+1:
 #                 start = i
 #                 end = j-1
@@ -35,4 +35,4 @@ def solve1(A):
 #             j += 1
 #     return A[start:end+1]
 
-print(solve2(A1))
+print(solve1(A1))
