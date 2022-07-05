@@ -1,4 +1,5 @@
-arr = [0,3,7,2,5,8,4,6,0,1]
+arr = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]
+
 def longestConsecutive(nums):
     """Approach is by checking the previous number not in set, that means we can start a consecutive sequence elements
     as long as next element is in set"""
@@ -15,3 +16,6 @@ def longestConsecutive(nums):
     return consec_len
 
 print(longestConsecutive(arr))
+# TC: O(n), the if condition prevents to enter the while loop when previous num is present in set and
+# the while loop inside checks only when next num is in set. While loop runs for only n times in the code.
+# This optimizes total time. Take examples and check
