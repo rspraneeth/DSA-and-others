@@ -16,5 +16,4 @@ def maximumUnits(boxTypes, truckSize):
         i += 1
     return mx
 
-
 print(maximumUnits(A, B))
