@@ -18,3 +18,9 @@ for i in b:  # the latest python release has ordered hashmaps(order of the array
     if b[i] == 1:
         print(i)
         break
+
+# find distinct elements
+a = [1, 2, 3, 4, 5, 1, 2, 3, 5, 2, 1, 2, 6, 3, 4, 2, 1, 2, 3, 4, 2, 1, 2, 4, 5, 1, 1, 2, 3, 0]
+print(a)
+b = set(a)  # set function converts to set data type
+print(b)
