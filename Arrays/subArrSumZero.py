@@ -11,7 +11,7 @@ def checkAllDistinct(arr):
 print(checkAllDistinct(a))
 
 # check if there exist a subarray with sum = 0
-def subArrSumZero(arr):
+def subArrSumZero1(arr):
     """if there exists repetitive elements in prefix array, then there exists a subarray with sum zero. (take e.g.)"""
     pf = [0] * len(arr)  # prefix array
     pf[0] = arr[0]
@@ -20,4 +20,18 @@ def subArrSumZero(arr):
 
     return (False, True)[len(set(pf)) != len(arr) or 0 in pf]
 
-print(subArrSumZero(a))
+def subArrSumZero2(arr):
+    """Approach 2"""
+    sum = 0
+    c = {}
+    for i in arr:
+        sum += i
+        if sum == 0 or i == 0 or sum in c:
+            return 1
+        else:
+            c[sum] = 1
+    return 0
+
+
+print(subArrSumZero1(a))
+print(subArrSumZero2(a))
