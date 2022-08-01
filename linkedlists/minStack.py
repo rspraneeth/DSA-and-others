@@ -49,10 +49,11 @@ class LinkedList:
                 cur = cur.next
             print(cur.val)
 
-ll = LinkedList()
-ll.push(-11)
-ll.push(2)
-ll.push(-12)
-ll.pop()
-ll.print_ll()
-print(ll.getMin())
+if __name__ == '__main__':
+    ll = LinkedList()
+    ll.push(-11)
+    ll.push(2)
+    ll.push(-12)
+    ll.pop()
+    ll.print_ll()
+    print(ll.getMin())
